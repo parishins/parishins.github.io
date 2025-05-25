@@ -1,0 +1,299 @@
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background-color: #f6f4f2;
+  color: #6e4040;
+}
+
+header {
+  background-color: #000000;
+  padding: 1.5rem;
+  text-align: center;
+  color: #f5dddd;
+  font-family: 'Playfair Display', serif;
+}
+
+nav a {
+  margin: 0 1rem;
+  color: #dbc8c86d;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.pink-section {
+  background-color: #f7e8ed; /* soft baby pink */
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 1rem;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+section {
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.content-section {
+  padding: 2rem;
+  background-color: #eedae6;
+  margin: 1rem auto;
+  max-width: 900px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(200, 170, 180, 0.2);
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  color: #64033f;
+  border-bottom: 2px solid #f0d9e7;
+  padding-bottom: 0.5rem;
+}
+
+.card {
+  background-color: #f9f2f7;
+  border-left: 6px solid #dfb2c7;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(200, 170, 180, 0.3);
+}
+
+
+footer {
+  text-align: center;
+  background-color: #f5e4de;
+  padding: 1rem;
+  color: #6d6d6d;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  nav a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+  .content-section {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  background-image: url("images/leafy-tree.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.25;
+  z-index: -1;
+  pointer-events: none;
+}
+
+body::before {
+  bottom: 10px;
+  left: 10px;
+}
+
+body::after {
+  top: 10px;
+  right: 10px;
+}
+
+.about-container {
+  display: flex;
+  align-items: flex-start;  /* Align text and image at the top */
+  gap: 2rem;                /* Space between photo and text */
+  flex-wrap: wrap;          /* Wrap on smaller screens */
+}
+
+.profile-pic {
+  flex-shrink: 0;           /* Prevent image from shrinking */
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fddde6;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+  flex: 1;                  /* Take remaining horizontal space */
+  font-family: 'Satisfy', cursive;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  min-width: 250px;         /* Minimum width for readability */
+}
+
+
+.about-text {
+  font-family: 'Satisfy', cursive;
+  font-size: 1.4rem;
+  line-height: 1.8;
+}
+
+.floral-divider {
+  margin-top: 2rem;
+  border: none;
+  height: 4px;
+  background: linear-gradient(to right, #fddde6, #f3d2dc, #fddde6);
+  border-radius: 2px;
+}
+
+/* Handwritten heading for About Me */
+#about h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  color: #d38ba9;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-down {
+  margin-top: 1rem;
+}
+
+.scroll-down span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-bottom: 3px solid #fff;
+  border-right: 3px solid #fff;
+  transform: rotate(45deg);
+  animation: downBounce 1.5s infinite;
+  margin-top: 10px;
+}
+
+@keyframes downBounce {
+  0%, 100% {
+    transform: rotate(45deg) translateY(0);
+  }
+  50% {
+    transform: rotate(45deg) translateY(10px);
+  }
+}
+
+.petal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.petal {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url('images/petal.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+  animation: floatPetals 10s linear infinite;
+}
+
+@keyframes floatPetals {
+  0% {
+    transform: translateY(-10%) rotate(0deg);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+#about {
+  background-image: url('images/floral-watermark.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 300px;
+  background-blend-mode: lighten;
+  background-attachment: scroll;
+}
+#cad h2,
+#research h2,
+#contact h2 {
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+  font-size: 2rem; /* adjust size if needed */
+  color: #d38ba9;  /* optional: same pinkish color like your about me heading */
+  margin-bottom: 1rem;
+}
+html {
+  scroll-behavior: smooth;
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #f5dddd;
+  width: 0;
+  animation: typing 3s steps(30, end) forwards, blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+#contact i {
+  margin-right: 0.5rem;
+  transition: transform 0.3s ease;
+  color: #64033f;
+}
+
+#contact p:hover i {
+  transform: scale(1.2) rotate(10deg);
+}
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: #d38ba9;
+  width: 0%;
+  z-index: 1000;
+}

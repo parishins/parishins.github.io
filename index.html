@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Satisfy&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+ 
+
+  <header>
+    <h1>Parishi Narayani Shukla</h1>
+    <nav>
+      <a href="#cad">CAD Drawings</a>
+      <a href="#research">Ongoing Research</a>
+      <a href="#contact">Lets Connect</a>
+        <div id="scroll-progress"></div>
+  <a href="https://in.pinterest.com/parishi19/" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/145/145808.png" alt="Pinterest" width="32" height="32">
+</a>
+    </nav>
+    <div class="scroll-down">
+      <span></span>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="pink-section">
+      <h2>About Me</h2>
+      <div class="about-container">
+        <img src="images/profile.jpg" alt="Profile Photo" class="profile-pic" />
+        <div class="about-text">
+          <p>
+            Hey! I’m a passionate and curious Mechanical Engineering student who finds joy in blending logic with creativity. I believe in problem solving creativity.
+            Whether I’m designing robotic arms, sketching CAD models, or diving into research on bioinspired automation, I love exploring how machines can move with grace and purpose.
+            Beyond engineering, I adore the arts — painting delicate scenes, singing softly in cozy spaces, and dancing to my own rhythm. 
+            I believe in lifelong learning, gentle persistence, and creating with both heart and mind.
+          </p>
+            Thank you for visiting my space — I hope my work reflects the same warmth and elegance I strive for in life.
+          </p>
+        </div>
+      </div>
+      <hr class="floral-divider" />
+    </section>
+
+    <section id="cad" class="content-section">
+      <h2>CAD Drawings</h2>
+      <div class="card">
+        <h3>Piston</h3>
+        <p>Created using SolidWorks. Includes exploded views and motion analysis.</p>
+      </div>
+      <div class="card">
+        <h3>Robotic Arm Design</h3>
+        <p>A 3DOF robotic manipulator modeled for educational simulation purposes.</p>
+      </div>
+    </section>
+
+    <section id="research" class="content-section">
+      <h2>Ongoing Research</h2>
+      <div class="card">
+        <h3>Heat transfer enhancements</h3>
+        <p>Working on an experimental setup to enhance its heat transfer by using V-inserts.</p>
+        <p>Investigating heat transfer and friction charateristics of heat exchanger tubes with different geometrieds of insert.</p>
+      </div>
+      <div class="card">
+        <h3>Bioinspired Robotics</h3>
+        <p>Convergence of A.I and animal inspired robots for ecological conservation.</p>
+        <p>A collaborative interaction between A.I and animal robots opens up avenues for conservation strategies.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="content-section">
+  <h2>Let's Connect</h2>
+  <p>
+    <i class="fas fa-envelope"></i>
+    <a href="mailto:shuklaparishi19@gmail.com">shuklaparishi19@gmail.com</a>
+  </p>
+  <p>
+    <i class="fab fa-linkedin"></i>
+    <a href="https://www.linkedin.com/in/parishi-narayani-shukla" target="_blank" rel="noopener noreferrer">
+      linkedin.com/in/parishi-narayani-shukla
+    </a>
+  </p>
+</section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Parishi Narayani Shukla. All rights reserved.</p>
+  </footer>
+
+  <div class="petal-container"></div>
+
+  <script>
+  window.addEventListener('scroll', () => {
+    const scrolled = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    document.getElementById('scroll-progress').style.width = `${scrolled}%`;
+  });
+</script>
+
+    const container = document.querySelector('.petal-container');
+    const petalCount = 12;
+
+    for (let i = 0; i < petalCount; i++) {
+      const petal = document.createElement('div');
+      petal.classList.add('petal');
+      petal.style.left = Math.random() * 100 + 'vw';
+      petal.style.animationDuration = (6 + Math.random() * 5) + 's';
+      petal.style.animationDelay = Math.random() * 5 + 's';
+      container.appendChild(petal);
+    }
+  </script>
+  <script>
+  const sections = document.querySelectorAll('.content-section');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-in-visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  sections.forEach(section => {
+    section.classList.add('fade-in');
+    observer.observe(section);
+  });
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Leafy Background</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      width: 400px;
+      height: 400px;
+      background-image: url("images/leafy-tree.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0.25;
+      z-index: -1;
+    }
+
+    body::before {
+      bottom: 10px;
+      left: 10px;
+    }
+
+    body::after {
+      top: 10px;
+      right: 10px;
+    }
+
+    h1 {
+      text-align: center;
+      padding-top: 100px;
+    }
+  </style>
+</head>
+</html>
