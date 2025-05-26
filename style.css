@@ -297,3 +297,23 @@ html {
   width: 0%;
   z-index: 1000;
 }
+/* Quora Icon Animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.quora-icon {
+  color: #b92b27;
+  font-size: 24px;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+.quora-icon:hover {
+  animation: bounce 0.6s;
+}
