@@ -330,11 +330,13 @@ html {
   display: block;
 }
 .decorative-strip {
+  width: 100%;
   height: 100px;
   background-image: url('new-folder/strip-image.png');
   background-repeat: repeat-x;
-  background-position: full;
-  background-size: contain;
-  margin: 0 auto;
+  background-position: center;
+  background-size: auto; /* or use 'cover' if you want it to stretch */
+  margin: 0;
+  padding: 0;
 }
 
