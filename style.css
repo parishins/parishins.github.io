@@ -338,5 +338,52 @@ html {
   margin: 0;
   padding: 0;
 }
+.profile-pic {
+  border-radius: 50%;
+  transition: box-shadow 0.5s ease;
+}
+
+.profile-pic:hover {
+  box-shadow: 0 0 20px rgba(185, 43, 39, 0.5);
+}
+nav a {
+  position: relative;
+  color: #444;
+  text-decoration: none;
+  padding: 0 8px;
+  font-weight: 500;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 100%;
+  background-color: #b92b27;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: left;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+}
+.decorative-strip {
+  width: 100%;
+  height: 80px;
+  background-image: url('images/strip-image.png');
+  background-size: cover;
+  background-repeat: repeat-x;
+  background-position: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  animation: float-strip 15s linear infinite;
+}
+
+@keyframes float-strip {
+  0% { background-position-x: 0; }
+  100% { background-position-x: 1000px; }
+}
 
 
