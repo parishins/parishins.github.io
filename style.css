@@ -214,13 +214,12 @@ body::after {
   position: absolute;
   width: 20px;
   height: 20px;
- background-image: url('profile.jpg');
-
-  background-size: contain;
-  background-repeat: no-repeat;
-  opacity: 0.6;
-  animation: floatPetals 10s linear infinite;
+  background-image: url("images/petal.png"); /* small icon for animation */
+  background-size: cover;
+  animation: fall linear infinite;
+  opacity: 0.8;
 }
+
 
 @keyframes floatPetals {
   0% {
@@ -332,15 +331,12 @@ html {
 .decorative-strip {
   width: 100%;
   height: 100px;
-  background-image: url('new-folder/strip-image.png');
+  background-image: url('new-folder/strip-image.png'); /* decorative strip only */
   background-repeat: repeat-x;
   background-position: center;
-  background-size: auto; /* or use 'cover' if you want it to stretch */
+  background-size: auto;
   margin: 0;
   padding: 0;
 }
-body, main {
-  margin: 0;
-  padding: 0;
-}
+
 
