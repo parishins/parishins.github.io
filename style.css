@@ -318,3 +318,15 @@ html {
 .quora-icon:hover {
   animation: bounce 0.6s;
 }
+.strip-image-container {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 2rem; /* Space from About Me */
+}
+
+.strip-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
