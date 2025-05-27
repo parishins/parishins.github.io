@@ -1,34 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parishi Narayani Shukla</title>
   <meta name="p:domain_verify" content="37c6212e22528527df7cf1978128b0a8"/>
 
   <!-- Pinterest Tag -->
   <script>
-  !function(e){if(!window.pintrk){window.pintrk = function () {
-  window.pintrk.queue.push(Array.prototype.slice.call(arguments))};var
-    n=window.pintrk;n.queue=[],n.version="3.0";var
-    t=document.createElement("script");t.async=!0,t.src=e;var
-    r=document.getElementsByTagName("script")[0];
-    r.parentNode.insertBefore(t,r)}}("https://s.pinimg.com/ct/core.js");
-  pintrk('load', '2612378201005', {em: '<user_email_address>'});
-  pintrk('page');
+    !function(e){if(!window.pintrk){window.pintrk = function () {
+    window.pintrk.queue.push(Array.prototype.slice.call(arguments))};var
+      n=window.pintrk;n.queue=[],n.version="3.0";var
+      t=document.createElement("script");t.async=!0,t.src=e;var
+      r=document.getElementsByTagName("script")[0];
+      r.parentNode.insertBefore(t,r)}}("https://s.pinimg.com/ct/core.js");
+    pintrk('load', '2612378201005', {em: '<user_email_address>'});
+    pintrk('page');
   </script>
   <noscript>
-  <img height="1" width="1" style="display:none;" alt=""
-    src="https://ct.pinterest.com/v3/?event=init&tid=2612378201005&pd[em]=<hashed_email_address>&noscript=1" />
+    <img height="1" width="1" style="display:none;" alt=""
+      src="https://ct.pinterest.com/v3/?event=init&tid=2612378201005&pd[em]=<hashed_email_address>&noscript=1" />
   </noscript>
   <!-- end Pinterest Tag -->
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Satisfy&display=swap" rel="stylesheet">
-  <link href="style.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
+  <link rel="stylesheet" href="style.css">
 
+  <style>
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      width: 400px;
+      height: 400px;
+      background-image: url("images/leafy-tree.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0.25;
+      z-index: -1;
+    }
+
+    body::before {
+      bottom: 10px;
+      left: 10px;
+    }
+
+    body::after {
+      top: 10px;
+      right: 10px;
+    }
+
+    #scroll-progress {
+      height: 4px;
+      background-color: #b92b27;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      z-index: 999;
+    }
+
+    .decorative-strip {
+      width: 100%;
+      height: 100px;
+      background-image: url('new-folder/strip-image.png');
+      background-repeat: repeat-x;
+      background-position: center;
+      background-size: auto;
+    }
+
+    .petal {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-image: url("images/petal.png");
+      background-size: cover;
+      animation: fall linear infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+
+    .fade-in-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
 <body>
   <div id="scroll-progress"></div>
 
@@ -61,10 +131,8 @@
           </p>
         </div>
       </div>
+      <div class="decorative-strip"></div>
     </section>
-
-    <!-- Decorative Strip Background Div -->
-    <div class="decorative-strip"></div>
 
     <section id="cad" class="content-section">
       <h2>CAD Drawings</h2>
